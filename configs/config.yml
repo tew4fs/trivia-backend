@@ -1,0 +1,6 @@
+local:
+  port: 8080
+  loglevel: debug
+dev:
+  port: 8080
+  loglevel: info
