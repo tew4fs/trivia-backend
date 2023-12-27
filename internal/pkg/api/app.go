@@ -3,7 +3,8 @@ package api
 import (
 	"fmt"
 	"net/http"
-	"tew4fs/golang-api-skeleton/internal/pkg/config"
+	"tew4fs/trivia-backend/internal/pkg/config"
+	"tew4fs/trivia-backend/internal/pkg/state"
 	"time"
 
 	"github.com/go-chi/chi"
@@ -19,6 +20,7 @@ type App struct {
 	logger *zap.Logger
 	server http.Server
 	router *chi.Mux
+	state  *state.State
 }
 
 func NewApp(cfg config.AppConfig, logger *zap.Logger) *App {
@@ -26,6 +28,7 @@ func NewApp(cfg config.AppConfig, logger *zap.Logger) *App {
 		cfg:    cfg,
 		logger: logger,
 		router: chi.NewRouter(),
+		state:  state.NewState(),
 	}
 
 	s.server = http.Server{
@@ -42,6 +45,6 @@ func NewApp(cfg config.AppConfig, logger *zap.Logger) *App {
 }
 
 func (a *App) Start() {
-	a.logger.Info(fmt.Sprintf("Starting server on port %d", a.cfg.Port))
+	a.logger.Info(fmt.Sprintf("Starting server at address %s", a.server.Addr))
 	a.logger.Fatal("API shutting down", zap.Error(a.server.ListenAndServe()))
 }

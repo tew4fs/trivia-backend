@@ -2,7 +2,7 @@ package log
 
 import (
 	"strings"
-	"tew4fs/golang-api-skeleton/internal/pkg/config"
+	"tew4fs/trivia-backend/internal/pkg/config"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -18,8 +18,8 @@ var (
 	}
 )
 
-func GetLogger(cfg config.AppConfig) *zap.Logger {
-	logger := newLogger(cfg)
+func GetLogger() *zap.Logger {
+	logger := newLogger(*config.Config)
 	defer logger.Sync()
 	return logger
 }

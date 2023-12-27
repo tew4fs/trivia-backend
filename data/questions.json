@@ -1,0 +1,10 @@
+{"question": "What is the capital of Japan?", "answer": "Tokyo", "choices": ["Beijing", "Seoul", "Tokyo", "Bangkok"], "category": "Geography"}
+{"question": "Who wrote the play 'Hamlet'?", "answer": "William Shakespeare", "choices": ["Charles Dickens", "Jane Austen", "William Shakespeare", "Mark Twain"], "category": "Literature"}
+{"question": "What is the chemical symbol for gold?", "answer": "Au", "choices": ["Ag", "Fe", "Au", "Pt"], "category": "Science"}
+{"question": "Which famous scientist developed the theory of relativity?", "answer": "Albert Einstein", "choices": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Stephen Hawking"], "category": "Science"}
+{"question": "In which year did World War II end?", "answer": "1945", "choices": ["1918", "1939", "1945", "1950"], "category": "History"}
+{"question": "What is the largest mammal in the world?", "answer": "Blue whale", "choices": ["Elephant", "Giraffe", "Blue whale", "Hippopotamus"], "category": "Animals"}
+{"question": "Which planet is known as the 'Red Planet'?", "answer": "Mars", "choices": ["Jupiter", "Mars", "Venus", "Saturn"], "category": "Space"}
+{"question": "Who is credited with inventing the light bulb?", "answer": "Thomas Edison", "choices": ["Nikola Tesla", "Thomas Edison", "Alexander Graham Bell", "Albert Einstein"], "category": "Inventions"}
+{"question": "What is the national flower of the United States?", "answer": "Rose", "choices": ["Lily", "Rose", "Tulip", "Daisy"], "category": "Culture"}
+{"question": "Which famous artist cut off a part of his own ear?", "answer": "Vincent van Gogh", "choices": ["Pablo Picasso", "Vincent van Gogh", "Leonardo da Vinci", "Michelangelo"], "category": "Art"}

@@ -3,7 +3,7 @@ package api
 import (
 	"fmt"
 	"net/http"
-	"tew4fs/golang-api-skeleton/internal/pkg/constant"
+	"tew4fs/trivia-backend/internal/pkg/constant"
 
 	"go.uber.org/zap"
 )

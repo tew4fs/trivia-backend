@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+
+  app:
+    image: trivia-backend
+    ports:
+      - "3000:3000/tcp"
+    environment:
+      ENV: local
+    restart: unless-stopped

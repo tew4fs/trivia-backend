@@ -15,25 +15,24 @@ type AppConfig struct {
 }
 
 var (
-	CONFIG_FILE = "./configs/config.yml"
+	configFile = "./configs/config.yml"
+	Config     = &AppConfig{}
 )
 
-func LoadConfigs() AppConfig {
-	viper.SetConfigFile(CONFIG_FILE)
+func LoadConfigs() {
+	viper.SetConfigFile(configFile)
 	viper.ReadInConfig()
 
 	env := getEnvVarOrString("ENV", "local")
 
 	envValues := viper.GetStringMap(env)
 
-	cfg := AppConfig{}
-	cfg.Env = env
-	err := mapstructure.Decode(envValues, &cfg)
+	Config.Env = env
+	err := mapstructure.Decode(envValues, Config)
 	if err != nil {
 		panic(err)
 	}
 
-	return cfg
 }
 
 func getEnvVarOrString(path string, defaultValue string) string {

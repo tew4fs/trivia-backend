@@ -1,16 +1,16 @@
 package main
 
 import (
-	"tew4fs/golang-api-skeleton/internal/pkg/api"
-	"tew4fs/golang-api-skeleton/internal/pkg/config"
-	"tew4fs/golang-api-skeleton/internal/pkg/log"
+	"tew4fs/trivia-backend/internal/pkg/api"
+	"tew4fs/trivia-backend/internal/pkg/config"
+	"tew4fs/trivia-backend/internal/pkg/log"
 )
 
 func main() {
-	cfg := config.LoadConfigs()
-	logger := log.GetLogger(cfg)
+	config.LoadConfigs()
+	logger := log.GetLogger()
 
-	app := api.NewApp(cfg, logger)
+	app := api.NewApp(*config.Config, logger)
 
 	app.Start()
 

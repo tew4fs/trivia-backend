@@ -1,7 +1,17 @@
 default: build
 
+Local-Image-Name = trivia-backend
+
 build:
-	@ go build -o bin/golang-api-skeleton main.go
+	@ go build -o bin/trivia-backend main.go
 
 run: build
-	@ ./bin/golang-api-skeleton
+	@ ./bin/trivia-backend
+
+docker-build: 
+	docker build . -t $(Local-Image-Name)
+
+docker-compose:
+	docker-compose up
+
+docker-run: docker-build docker-compose
