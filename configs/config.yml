@@ -1,6 +1,5 @@
 local:
   port: 3000
-  apphost: localhost
   loglevel: debug
 dev:
   port: 8080

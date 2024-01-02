@@ -3,7 +3,7 @@ default: build
 Local-Image-Name = trivia-backend
 
 build:
-	@ go build -o bin/trivia-backend main.go
+	@ go build -o $(Local-Image-Name) main.go
 
 run: build
 	@ ./bin/trivia-backend

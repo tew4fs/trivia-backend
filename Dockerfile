@@ -1,12 +1,11 @@
-FROM golang:1.21
+FROM golang:1.21-alpine
 
-ENV APP_HOME=/app
+WORKDIR /app
 
-COPY . $APP_HOME
-WORKDIR $APP_HOME
+COPY . .
 
 EXPOSE 3000
 
-RUN ["go", "build", "-o", "bin/trivia-backend", "main.go"]
+RUN go build -o trivia-backend
 
-CMD ["./bin/trivia-backend"]
+CMD ["./trivia-backend"]
