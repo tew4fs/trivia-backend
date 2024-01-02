@@ -12,6 +12,6 @@ docker-build:
 	docker build . -t $(Local-Image-Name)
 
 docker-compose:
-	docker-compose up
+	docker compose up
 
 docker-run: docker-build docker-compose
